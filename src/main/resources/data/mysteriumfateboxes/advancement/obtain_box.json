@@ -1,0 +1,29 @@
+{
+  "parent": "mysteriumfateboxes:root",
+  "display": {
+    "icon": {
+      "id": "mysteriumfateboxes:mysterium_fate_box"
+    },
+    "title": {
+      "translate": "advancement.mysteriumfateboxes.obtain_box.title"
+    },
+    "description": {
+      "translate": "advancement.mysteriumfateboxes.obtain_box.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "has_box": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mysteriumfateboxes:mysterium_fate_box"
+          }
+        ]
+      }
+    }
+  }
+}

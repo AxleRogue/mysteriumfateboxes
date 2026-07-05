@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "mysteriumfateboxes:block/mysterium_fate_box" },
+        "facing=south": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 180 },
+        "facing=west": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 270 },
+        "facing=east": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 90 }
+    }
+}

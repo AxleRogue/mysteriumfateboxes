@@ -1,0 +1,16 @@
+{
+  "mysterium_fateboxes_good_luck": {
+    "category": "player",
+    "subtitle": "mysteriumfateboxes.subtitle.mysterium_fateboxes_good_luck",
+    "sounds": [
+      "mysteriumfateboxes:mysterium_fateboxes_good_luck"
+    ]
+  },
+  "mysterium_fateboxes_bad_luck": {
+    "category": "player",
+    "subtitle": "mysteriumfateboxes.subtitle.mysterium_fateboxes_bad_luck",
+    "sounds": [
+      "mysteriumfateboxes:mysterium_fateboxes_bad_luck"
+    ]
+  }
+}

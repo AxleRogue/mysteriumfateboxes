@@ -1,0 +1,19 @@
+{
+  "block.mysteriumfateboxes.mysterium_fate_box": "Mysterium Fate Box",
+  "item.mysteriumfateboxes.mysterium_fate_box_key": "Mysterium Fate Box Key",
+  "itemgroup.mysteriumfateboxes": "Mysterium Fateboxes",
+
+  "mysteriumfateboxes.configuration.title": "Mysterium Fateboxes Configs",
+  "mysteriumfateboxes.configuration.section.mysteriumfateboxes.common.toml": "Mysterium Fateboxes Configs",
+  "mysteriumfateboxes.configuration.section.mysteriumfateboxes.common.toml.title": "Mysterium Fateboxes Configs",
+
+  "mysteriumfateboxes.subtitle.mysterium_fateboxes_good_luck": "Good Fate!",
+  "mysteriumfateboxes.subtitle.mysterium_fateboxes_bad_luck": "Bad Fate!",
+
+  "advancement.mysteriumfateboxes.root.title": "Mysterium Fate",
+  "advancement.mysteriumfateboxes.root.desc": "Discover the secrets of the Fate Boxes.",
+  "advancement.mysteriumfateboxes.obtain_box.title": "A Box of Fate",
+  "advancement.mysteriumfateboxes.obtain_box.desc": "Craft a Mysterium Fate Box.",
+  "advancement.mysteriumfateboxes.obtain_key.title": "The Key to Destiny",
+  "advancement.mysteriumfateboxes.obtain_key.desc": "Craft a Mysterium Fate Box Key."
+}

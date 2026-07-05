@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "mysteriumfateboxes:mysterium_fate_box"
+    },
+    "title": {
+      "translate": "advancement.mysteriumfateboxes.root.title"
+    },
+    "description": {
+      "translate": "advancement.mysteriumfateboxes.root.desc"
+    },
+    "background": "mysteriumfateboxes:textures/gui/advancements/backgrounds/mysterium_fate_box_background.png",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:gold_ingot"
+          }
+        ]
+      }
+    }
+  }
+}
