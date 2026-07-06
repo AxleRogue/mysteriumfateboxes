@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_nether_star": {
+    "has_diamond": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "minecraft:nether_star"
+            "items": "minecraft:diamond"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_nether_star",
+      "has_diamond",
       "has_the_recipe"
     ]
   ]

@@ -3,7 +3,7 @@
   "category": "misc",
   "pattern": [
     "IGI",
-    "GSG",
+    "GDG",
     "IGI"
   ],
   "key": {
@@ -13,8 +13,8 @@
     "G": {
       "item": "minecraft:gold_ingot"
     },
-    "S": {
-      "item": "minecraft:nether_star"
+    "D": {
+      "item": "minecraft:diamond"
     }
   },
   "result": {

@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.3-release] - 2026-07-05
+
+### Added
+* **Wither Boss Ambush**: Added a deadly new trap to the Bad Fate event. Rolling a 5% chance on a HIGH Bad Fate Level will now simultaneously spawn 4 Wither Bosses around the player's position!
+
 ## [1.0.1-release] - 2026-07-05
 
 ### Added

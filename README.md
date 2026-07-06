@@ -8,7 +8,7 @@
 
 ### Mysterium Fate Box
 The core block of the mod. Placing it down sets the stage for a game of chance. You cannot open it with your bare hands—you must use a special key, and the block is completely unbreakable in Survival mode (just like Bedrock)!
-* **Recipe:** 4 Iron Ingots (corners), 4 Gold Ingots (sides), and 1 Nether Star (center).
+* **Recipe:** 4 Iron Ingots (corners), 4 Gold Ingots (sides), and 1 Diamond (center).
 
 ### Mysterium Fate Box Key
 The mystical key required to unlock the Fate Box's secrets. Right-clicking a Fate Box with this key consumes the key and triggers the event.
@@ -32,10 +32,11 @@ If the odds are in your favor, a joyful sound plays, you receive a green chat me
 
 ### 🔴 Bad Fate (Punishments)
 If your luck runs out, an ominous sound plays, a red chat message appears, and one of several terrifying punishments is unleashed depending on your exact roll:
-1. **TNT Explosion (50% bracket):** A sudden, raw explosion exactly at your location.
-2. **Raining Flaming Arrows (15% bracket):** An army of unseen archers fires 25 to 50 flaming arrows high into the sky, raining down over a 20x20 area with dynamic arcing vectors targeting your position.
-3. **Lava Pool Trap (10% bracket):** Instantly generates a 7x7 circular pool of lava directly beneath your feet, no matter where you ran.
-4. **Mob Hordes (25% bracket):** Spawns 4 to 7 Zombies, Husks, or Drowned surrounding you. *Beware: Each mob has a 33% chance to spawn as an "Elite" wearing full Netherite Armor and wielding a Netherite weapon!*
+1. **Wither Boss Ambush:** If you hit a 5% chance roll on a HIGH Fate Level, 4 Wither Bosses will spawn simultaneously around you!
+2. **TNT Explosion (50% bracket):** A sudden, raw explosion exactly at your location.
+3. **Raining Flaming Arrows (15% bracket):** An army of unseen archers fires 25 to 50 flaming arrows high into the sky, raining down over a 20x20 area with dynamic arcing vectors targeting your position.
+4. **Lava Pool Trap (10% bracket):** Instantly generates a 7x7 circular pool of lava directly beneath your feet, no matter where you ran.
+5. **Mob Hordes (25% bracket):** Spawns 4 to 7 Zombies, Husks, or Drowned surrounding you. *Beware: Each mob has a 33% chance to spawn as an "Elite" wearing full Netherite Armor and wielding a Netherite weapon!*
 
 ---
 
@@ -49,7 +50,7 @@ If your luck runs out, an ominous sound plays, a red chat message appears, and o
 
 ## 🛠️ Installation
 1. Install **NeoForge 26.2**.
-2. Drop the `mysteriumfateboxes-1.0.1-release.jar` into your `.minecraft/mods` folder.
+2. Drop the `mysteriumfateboxes-1.0.3-release.jar` into your `.minecraft/mods` folder.
 3. Load up your world and test your fate!
 
 ---

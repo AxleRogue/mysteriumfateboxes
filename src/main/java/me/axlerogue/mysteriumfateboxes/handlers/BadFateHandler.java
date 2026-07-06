@@ -13,6 +13,11 @@ public class BadFateHandler {
         PlayFateSoundHandler.playSound(level, pos, false);
         ColorableFateMessageHandler.sendFateMessage(player, false, "You received Bad Fate! (" + FateLevel.name() + " Fate)");
 
+        if (FateLevel == FateLevelTypeEnum.HIGH && RANDOM.nextInt(100) < 5) {
+            WitherBossHandler.spawnWithers(level, player.blockPosition());
+            return;
+        }
+
         if (roll <= 50) {
             ExplosionDetonationHandler.detonate(level, pos, player);
         } else if (roll <= 65) {
