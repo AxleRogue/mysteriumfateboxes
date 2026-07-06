@@ -1,13 +1,12 @@
 package me.axlerogue.mysteriumfateboxes.handlers;
 
+import java.util.Random;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-
-import java.util.Random;
 
 public class ItemGiftHandler {
     private static final Random RANDOM = new Random();

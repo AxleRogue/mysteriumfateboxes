@@ -1,12 +1,9 @@
 package me.axlerogue.mysteriumfateboxes;
 
+import com.mojang.logging.LogUtils;
 import me.axlerogue.mysteriumfateboxes.registry.ModBlocks;
 import me.axlerogue.mysteriumfateboxes.registry.ModCreativeModeTabs;
 import me.axlerogue.mysteriumfateboxes.registry.ModItems;
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -24,8 +21,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -33,7 +30,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
+import org.slf4j.Logger;
 
 @Mod(MysteriumFateboxes.MODID)
 public class MysteriumFateboxes {
@@ -41,8 +38,6 @@ public class MysteriumFateboxes {
     public static final String MODID = "mysteriumfateboxes";
 
     public static final Logger LOGGER = LogUtils.getLogger();
-
-
 
     public MysteriumFateboxes(IEventBus modEventBus, ModContainer modContainer) {
 
@@ -56,12 +51,9 @@ public class MysteriumFateboxes {
 
         me.axlerogue.mysteriumfateboxes.registry.ModSounds.register(modEventBus);
 
-
         NeoForge.EVENT_BUS.register(this);
 
-
         modEventBus.addListener(this::addCreative);
-
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -70,11 +62,9 @@ public class MysteriumFateboxes {
 
     }
 
-
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
     }
-
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {

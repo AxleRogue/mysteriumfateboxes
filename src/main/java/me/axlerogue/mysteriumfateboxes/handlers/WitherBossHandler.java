@@ -1,17 +1,18 @@
 package me.axlerogue.mysteriumfateboxes.handlers;
 
+import java.util.Random;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityTypes;
-import net.minecraft.world.entity.boss.wither.WitherBoss;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-
-import java.util.Random;
 
 public class WitherBossHandler {
     private static final Random RANDOM = new Random();
 
-    public static void spawnWithers(Level level, BlockPos pos) {
+    public static void spawnWithers(Level level, Player player) {
+        BlockPos pos = player.blockPosition();
         for (int i = 0; i < 4; i++) {
             WitherBoss wither = EntityTypes.WITHER.create(level, EntitySpawnReason.SPAWNER);
             if (wither != null) {

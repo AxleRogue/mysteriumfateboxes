@@ -1,20 +1,21 @@
 package me.axlerogue.mysteriumfateboxes.handlers;
 
+import java.util.Random;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.monster.zombie.Zombie;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-
-import java.util.Random;
 
 public class ZombieHordeHandler {
     private static final Random RANDOM = new Random();
 
-    public static void spawnHorde(Level level, BlockPos pos) {
+    public static void spawnHorde(Level level, Player player) {
+        BlockPos pos = player.blockPosition();
         int count = RANDOM.nextInt(4) + 4; // 4 to 7 zombies
         
         for (int i = 0; i < count; i++) {

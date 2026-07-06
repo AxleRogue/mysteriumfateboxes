@@ -1,5 +1,7 @@
 package me.axlerogue.mysteriumfateboxes.handlers;
 
+import java.util.Random;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityTypes;
@@ -7,12 +9,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.arrow.Arrow;
 import net.minecraft.world.level.Level;
 
-import java.util.Random;
-
 public class RainingFlamingArrowsHandler {
     private static final Random RANDOM = new Random();
 
-    public static void rainArrows(Level level, BlockPos pos, Player player) {
+    public static void rainArrows(Level level, Player player) {
         BlockPos playerPos = player.blockPosition(); // Track player's current position
         int arrowCount = RANDOM.nextInt(25) + 25; // Increased to 25-50 arrows for the "army" feel
         

@@ -1,13 +1,12 @@
 package me.axlerogue.mysteriumfateboxes.handlers;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 import me.axlerogue.mysteriumfateboxes.registry.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.TimeUnit;
 
 public class PlayOpenFateBoxSoundHandler {
     private static final int SOUND_DURATION_SECONDS = 15; // Timer check for when the open sound is finished
@@ -20,7 +19,7 @@ public class PlayOpenFateBoxSoundHandler {
             // Wait for the sound to finish, then play fireworks and do the rest of the actions
             CompletableFuture.runAsync(() -> {}, CompletableFuture.delayedExecutor(SOUND_DURATION_SECONDS, TimeUnit.SECONDS))
                     .thenRunAsync(() -> {
-                        PlayFireWorksSoundHandler.handle(level, pos, player);
+                        PlayFireWorksSoundHandler.handle(level, pos);
                         ChoiceHandler.executeFate(level, pos, player);
                     }, level.getServer());
         }

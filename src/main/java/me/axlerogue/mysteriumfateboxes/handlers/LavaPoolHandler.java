@@ -2,11 +2,11 @@ package me.axlerogue.mysteriumfateboxes.handlers;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.Level;
 
 public class LavaPoolHandler {
-    public static void createPool(Level level, BlockPos pos, Player player) {
+    public static void createPool(Level level, Player player) {
         BlockPos playerPos = player.blockPosition(); // Use the player's exact position instead of the block's
         int radius = 3; // 3 block radius makes a nice 7x7 circle
 

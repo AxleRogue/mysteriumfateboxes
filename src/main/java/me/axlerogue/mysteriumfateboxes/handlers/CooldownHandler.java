@@ -1,10 +1,9 @@
 package me.axlerogue.mysteriumfateboxes.handlers;
 
-import net.minecraft.world.entity.player.Player;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import net.minecraft.world.entity.player.Player;
 
 public class CooldownHandler {
     private static final Map<UUID, Long> cooldowns = new HashMap<>();

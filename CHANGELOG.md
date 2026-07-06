@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.4-release] - 2026-07-06
+
+### Changed
+* **Code Refactoring & Cleanup**: Rewrote and cleaned up backend code logic across the mod for efficiency and maintainability. Properly formatted variables, unused imports, and unused parameters across multiple handlers.
+* **Bad Fate Traps Targeting**: Horde spawn traps (Zombies, Husks, Drowned) and the Wither Boss trap now actively track and spawn relative to the player's exact position instead of the initial Fate Box location.
+* **Good Fate System Rebalance**: Adjusted the primary reward threshold. There is now a 25% base chance to roll a major gift category (Items, Weapons, Armor Sets, Tools, Food). Failing the 25% roll will grant the default single item fallback reward.
+* **Removed Redundancies**: Removed unused backend system handlers (like the FateDecisionHandler).
+
 ## [1.0.3-release] - 2026-07-05
 
 ### Added

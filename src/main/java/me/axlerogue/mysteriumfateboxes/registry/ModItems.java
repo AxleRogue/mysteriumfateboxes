@@ -1,7 +1,7 @@
 package me.axlerogue.mysteriumfateboxes.registry;
 
-import me.axlerogue.mysteriumfateboxes.MysteriumFateboxes;
 import me.axlerogue.mysteriumfateboxes.item.MysteriumFateBoxKeyItem;
+import me.axlerogue.mysteriumfateboxes.MysteriumFateboxes;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;

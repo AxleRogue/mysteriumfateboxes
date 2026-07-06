@@ -23,7 +23,7 @@ When you unlock a Mysterium Fate Box, you experience a dynamic **Roll Chance Sys
 The system rolls a number from 1 to 100, modified dynamically by your hidden **Fate Level** (LOW, MID, or HIGH), directly altering your chances of certain outcomes.
 
 ### 🟢 Good Fate (Rewards)
-If the odds are in your favor, a joyful sound plays, you receive a green chat message (detailing your Fate Level), and you are rewarded. A 45% chance grants you one of five incredible reward categories. Missing this roll still gives a fallback item reward!
+If the odds are in your favor, a joyful sound plays, you receive a green chat message (detailing your Fate Level), and you are rewarded. A 25% chance grants you one of five incredible reward categories. Missing this roll still gives a fallback item reward!
 1. **Valuable Items:** Drops 1-3 highly valuable items (Diamonds, Emeralds, Netherite Ingots, Totems of Undying, Enchanted Golden Apples, blocks of precious metals, etc.).
 2. **Weapons:** Drops a random high-tier weapon (Diamond/Netherite Swords, Bows, Crossbows, Tridents).
 3. **Armor Sets:** Drops an entire, full set of armor at once! Ranges from Iron and Gold to Diamond and Netherite.
@@ -50,7 +50,7 @@ If your luck runs out, an ominous sound plays, a red chat message appears, and o
 
 ## 🛠️ Installation
 1. Install **NeoForge 26.2**.
-2. Drop the `mysteriumfateboxes-1.0.3-release.jar` into your `.minecraft/mods` folder.
+2. Drop the `mysteriumfateboxes-1.0.4-release.jar` into your `.minecraft/mods` folder.
 3. Load up your world and test your fate!
 
 ---

@@ -1,19 +1,18 @@
 package me.axlerogue.mysteriumfateboxes.handlers;
 
+import java.util.Random;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
-import java.util.Random;
-
 public class GoodFateHandler {
     private static final Random RANDOM = new Random();
 
-    public static void handleGoodFate(Level level, BlockPos pos, Player player, int roll, FateLevelTypeEnum FateLevel) {
+    public static void handleGoodFate(Level level, BlockPos pos, Player player, int roll, FateLevelTypeEnum fateLevel) {
         PlayFateSoundHandler.playSound(level, pos, true);
-        ColorableFateMessageHandler.sendFateMessage(player, true, "You received Good Fate! (" + FateLevel.name() + " Fate)");
+        ColorableFateMessageHandler.sendFateMessage(player, true, "You received Good Fate! (" + fateLevel.name() + " Fate)");
         
-        if (roll <= 45) {
+        if (roll <= 25) {
             int giftType = RANDOM.nextInt(5);
             switch (giftType) {
                 case 0:
@@ -33,7 +32,7 @@ public class GoodFateHandler {
                     break;
             }
         } else {
-            // Default fallback if they miss the 45% roll to ensure they still get something
+            // Default fallback if they miss the 25% roll to ensure they still get something
             ItemGiftHandler.giftRandomItem(level, pos);
         }
     }
