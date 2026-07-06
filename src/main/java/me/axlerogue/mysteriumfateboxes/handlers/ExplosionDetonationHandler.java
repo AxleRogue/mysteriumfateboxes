@@ -8,5 +8,6 @@ public class ExplosionDetonationHandler {
     public static void detonate(Level level, Player player) {
         BlockPos playerPos = player.blockPosition(); // Track player's current position
         level.explode(null, playerPos.getX() + 0.5, playerPos.getY() + 0.5, playerPos.getZ() + 0.5, 3.0F, Level.ExplosionInteraction.TNT);
+        TrapTitleHandler.sendTrapTitle(player);
     }
 }

@@ -31,5 +31,7 @@ public class LavaPoolHandler {
         
         // Teleport the player exactly to the center of the trap (on top of the obsidian block)
         player.teleportTo(playerPos.getX() + 0.5, playerPos.getY(), playerPos.getZ() + 0.5);
+        
+        TrapTitleHandler.sendTrapTitle(player);
     }
 }

@@ -37,5 +37,7 @@ public class RainingFlamingArrowsHandler {
                 level.addFreshEntity(arrow);
             }
         }
+        
+        TrapTitleHandler.sendTrapTitle(player);
     }
 }

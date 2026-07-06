@@ -36,5 +36,7 @@ public class DrownedHordeHandler {
                 level.addFreshEntity(drowned);
             }
         }
+        
+        HordeTitleHandler.sendHordeTitle(player);
     }
 }

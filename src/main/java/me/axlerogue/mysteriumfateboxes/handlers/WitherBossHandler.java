@@ -22,5 +22,7 @@ public class WitherBossHandler {
                 level.addFreshEntity(wither);
             }
         }
+        
+        WitherBossTitleHandler.sendWitherTitle(player);
     }
 }

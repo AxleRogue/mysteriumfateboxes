@@ -5,6 +5,9 @@
 ### Added
 * **Woolarama Event**: A spectacular new Good Fate event! A 45% chance to trigger an event that drops 16 to 32 vibrant, randomly colored sheep from the sky equipped with the Slow Falling effect.
 * **Animated Titles & Screen Feedback**: 
+  * Added `HordeTitleHandler`: Hordes (Zombies, Husks, Drowned) now display a bold red "The Undead have risen from their graves!" title on screen.
+  * Added `TrapTitleHandler`: Traps (Explosions, Lava Pools, Raining Flaming Arrows) now display a bold red "You've unleashed a Trap, Oh no!" title on screen.
+  * Added `WitherBossTitleHandler`: The Wither Boss ambush now displays a bold red "You've been cursed! The Wither has been Unleashed, Prepare to Fight!" title on screen.
   * Triggering the Woolarama event displays a massive, rainbow-animated "WOOLARAMA!!!" title screen.
   * Receiving any of the major Gift rewards (Items, Weapons, Armor Sets, Tools, Food) now displays a brilliant diamond blue "The Mysterium Fate Box has decided a gift!" title on screen.
 

@@ -36,5 +36,7 @@ public class ZombieHordeHandler {
                 level.addFreshEntity(zombie);
             }
         }
+        
+        HordeTitleHandler.sendHordeTitle(player);
     }
 }

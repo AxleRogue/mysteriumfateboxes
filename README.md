@@ -25,7 +25,12 @@ The system rolls a number from 1 to 100, modified dynamically by your hidden **F
 ### 🟢 Good Fate (Rewards)
 If the odds are in your favor, a joyful sound plays, you receive a green chat message (detailing your Fate Level), and you are rewarded. A 25% chance grants you one of five incredible reward categories. Missing this roll triggers the Woolarama event (45% chance) or gives a fallback item reward!
 
-* **On-Screen Titles:** If you get a major Gift reward, your screen will light up with a diamond blue "The Mysterium Fate Box has decided a gift!" text.
+* **On-Screen Titles:** 
+  * If you get a major Gift reward, your screen will light up with a diamond blue "The Mysterium Fate Box has decided a gift!" text.
+  * Triggering the Woolarama event shows a rainbow-animated "WOOLARAMA!!!" title.
+  * Triggering trap events (Explosion, Lava Pool, Arrows) displays a red "You've unleashed a Trap, Oh no!" title.
+  * Spawning mob hordes displays a red "The Undead have risen from their graves!" title.
+  * Spawning the Wither Boss ambush displays a red "You've been cursed! The Wither has been Unleashed, Prepare to Fight!" title.
 1. **Valuable Items:** Drops 1-3 highly valuable items (Diamonds, Emeralds, Netherite Ingots, Totems of Undying, Enchanted Golden Apples, blocks of precious metals, etc.).
 2. **Weapons:** Drops a random high-tier weapon (Diamond/Netherite Swords, Bows, Crossbows, Tridents).
 3. **Armor Sets:** Drops an entire, full set of armor at once! Ranges from Iron and Gold to Diamond and Netherite.

@@ -36,5 +36,7 @@ public class HuskHordeHandler {
                 level.addFreshEntity(husk);
             }
         }
+        
+        HordeTitleHandler.sendHordeTitle(player);
     }
 }
