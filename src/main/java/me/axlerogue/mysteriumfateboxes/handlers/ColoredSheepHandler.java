@@ -48,7 +48,7 @@ public class ColoredSheepHandler {
     }
     
     private static void animateWoolaramaTitle(ServerPlayer player, Level level) {
-        String text = "WOOLARAMA!!!";
+        String text = "WOOLARAMA!";
         int[] colors = {0xFF0000, 0xFF7F00, 0xFFFF00, 0x00FF00, 0x0000FF, 0x4B0082, 0x9400D3};
         
         player.connection.send(new ClientboundSetTitlesAnimationPacket(10, 60, 20));

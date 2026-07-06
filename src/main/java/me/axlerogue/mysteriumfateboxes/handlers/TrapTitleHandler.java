@@ -12,7 +12,7 @@ public class TrapTitleHandler {
     public static void sendTrapTitle(Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
             serverPlayer.connection.send(new ClientboundSetTitlesAnimationPacket(10, 60, 20));
-            Component title = Component.literal("You've unleashed a Trap, Oh no!")
+            Component title = Component.literal("TRAP TRIGGERED!")
                     .withStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xFF0000)).withBold(true)); // Red
             serverPlayer.connection.send(new ClientboundSetTitleTextPacket(title));
         }

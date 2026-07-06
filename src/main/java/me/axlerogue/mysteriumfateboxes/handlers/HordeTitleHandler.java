@@ -12,7 +12,7 @@ public class HordeTitleHandler {
     public static void sendHordeTitle(Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
             serverPlayer.connection.send(new ClientboundSetTitlesAnimationPacket(10, 60, 20));
-            Component title = Component.literal("The Undead have risen from their graves!")
+            Component title = Component.literal("UNDEAD HORDE!")
                     .withStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xFF0000)).withBold(true)); // Red
             serverPlayer.connection.send(new ClientboundSetTitleTextPacket(title));
         }

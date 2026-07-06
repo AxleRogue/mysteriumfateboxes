@@ -12,7 +12,7 @@ public class GiftTitleHandler {
     public static void sendGiftTitle(Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
             serverPlayer.connection.send(new ClientboundSetTitlesAnimationPacket(10, 60, 20));
-            Component title = Component.literal("The Mysterium Fate Box has decided a gift!")
+            Component title = Component.literal("A MYSTICAL GIFT!")
                     .withStyle(Style.EMPTY.withColor(TextColor.fromRgb(0x5EE9FF)).withBold(true)); // Diamond Blue
             serverPlayer.connection.send(new ClientboundSetTitleTextPacket(title));
         }

@@ -12,7 +12,7 @@ public class WitherBossTitleHandler {
     public static void sendWitherTitle(Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
             serverPlayer.connection.send(new ClientboundSetTitlesAnimationPacket(10, 60, 20));
-            Component title = Component.literal("You've been cursed! The Wither has been Unleashed, Prepare to Fight!")
+            Component title = Component.literal("WITHER CURSE!")
                     .withStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xFF0000)).withBold(true)); // Red
             serverPlayer.connection.send(new ClientboundSetTitleTextPacket(title));
         }
