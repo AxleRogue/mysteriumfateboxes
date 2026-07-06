@@ -49,13 +49,13 @@ public class MysteriumFateBoxBlock extends HorizontalDirectionalBlock {
                     long remaining = me.axlerogue.mysteriumfateboxes.handlers.CooldownHandler.getRemainingCooldown(player);
                     me.axlerogue.mysteriumfateboxes.handlers.ColorableCoolDownMessageHandler.sendOnCooldownMessage(player, remaining);
                 } else {
-                    me.axlerogue.mysteriumfateboxes.handlers.ChoiceHandler.executeFate(level, pos, player);
                     level.removeBlock(pos, false);
                     if (!player.isCreative()) {
                         itemStack.shrink(1);
                     }
                     me.axlerogue.mysteriumfateboxes.handlers.CooldownHandler.setCooldown(player);
                     me.axlerogue.mysteriumfateboxes.handlers.ColorableCoolDownMessageHandler.sendCooldownStartedMessage(player, me.axlerogue.mysteriumfateboxes.handlers.CooldownHandler.COOLDOWN_SECONDS);
+                    me.axlerogue.mysteriumfateboxes.handlers.PlayOpenFateBoxSoundHandler.handle(level, pos, player);
                 }
             }
             return level.isClientSide() ? net.minecraft.world.InteractionResult.SUCCESS : net.minecraft.world.InteractionResult.CONSUME;

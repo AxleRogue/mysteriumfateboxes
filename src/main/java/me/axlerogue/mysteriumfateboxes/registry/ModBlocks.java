@@ -16,7 +16,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MysteriumFateboxes.MODID);
 
 
-    public static final DeferredBlock<MysteriumFateBoxBlock> MYSTERIUM_FATE_BOX = registerBlock("mysterium_fate_box", MysteriumFateBoxBlock::new);
+    public static final DeferredBlock<MysteriumFateBoxBlock> MYSTERIUM_FATE_BOX = registerBlock("mysterium_fate_box", props -> new MysteriumFateBoxBlock(props.strength(-1.0F, 3600000.0F)));
 
 
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {

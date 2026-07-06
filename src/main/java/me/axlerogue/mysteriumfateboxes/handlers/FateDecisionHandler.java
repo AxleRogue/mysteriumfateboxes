@@ -2,10 +2,10 @@ package me.axlerogue.mysteriumfateboxes.handlers;
 
 import java.util.Random;
 
-public class LuckDecisionHandler {
+public class FateDecisionHandler {
     private static final Random RANDOM = new Random();
 
-    public static boolean determineLuck() {
+    public static boolean determineFate() {
         return RANDOM.nextBoolean();
     }
 }

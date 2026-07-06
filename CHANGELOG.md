@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.0.1-release] - 2026-07-05
+
+### Added
+* **Fate Box Opening Sequence**: Added a suspenseful 3-second delay upon unlocking the Fate Box.
+* **New Sounds**: 
+  * Added `mysterium_fateboxes_open_fatebox` sound and subtitle to play during the 3-second suspense phase.
+  * Added a vanilla firework twinkle sound to play right when the fate is executed.
+* **Dynamic Fate Levels System**: 
+  * Replaced the simple 50/50 flip with a deep `RollChanceHandler` system.
+  * Introduced Fate Level mechanics (LOW, MID, HIGH) which modify the base 1-100 roll.
+  * Chat messages now display your Fate Level when announcing your fate!
+* **Overhauled Rewards & Punishments Math**:
+  * Good Fate now relies on a 45% base threshold to roll major reward categories, with a fallback guarantee if you miss the roll.
+  * Bad Fate traps are now distributed by roll chance brackets: Explosion (0-50%), Arrows (51-65%), Lava Pool (66-75%), Mob Horde (76-100%).
+
+### Changed
+* **Fate Box Properties**: The Mysterium Fate Box is now completely unbreakable in survival mode (identical to Bedrock), forcing players to use the Fate Box Key.
+* **Internal Nomenclature**: Renamed all internal code instances, file names, enums, and variables referencing "Luck" to "Fate" to better match the mod's theme.
+* **Explosion Trap Overhaul**: The explosion now actively targets the player's exact `blockPosition()` at the moment of detonation rather than the original box location.
+* **Lava Pool Trap Overhaul**: The lava pool generation now actively tracks the player's position after the 3-second timer and spawns directly underneath them.
+* **Flaming Arrows Overhaul**: Completely reworked the arrow mechanic to simulate an "army of archers".
+  * Arrow count increased from 15-30 to 25-50.
+  * Spawn radius expanded from a 10x10 area to a massive 20x20 area.
+  * Altitude of spawned arrows increased significantly.
+  * Added dynamic X/Z axis velocities to arc the arrows inward towards the player's position.
+
+### Fixed
+* Fixed mismatched sound registration keys preventing the open sound `.ogg` file from playing.
+
 ## [1.0.0-release] - 2026-07-05
 
 ### Added

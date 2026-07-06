@@ -12,8 +12,10 @@ import java.util.function.Supplier;
 public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(Registries.SOUND_EVENT, MysteriumFateboxes.MODID);
 
-    public static final Supplier<SoundEvent> GOOD_LUCK = registerSoundEvent("mysterium_fateboxes_good_luck");
-    public static final Supplier<SoundEvent> BAD_LUCK = registerSoundEvent("mysterium_fateboxes_bad_luck");
+    public static final Supplier<SoundEvent> GOOD_FATE = registerSoundEvent("mysterium_fateboxes_good_fate");
+    public static final Supplier<SoundEvent> BAD_FATE = registerSoundEvent("mysterium_fateboxes_bad_fate");
+
+    public static final Supplier<SoundEvent> FATE_BOX_OPEN = registerSoundEvent("mysterium_fateboxes_open_fatebox");
 
     private static Supplier<SoundEvent> registerSoundEvent(String name) {
         return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(Identifier.fromNamespaceAndPath(MysteriumFateboxes.MODID, name)));

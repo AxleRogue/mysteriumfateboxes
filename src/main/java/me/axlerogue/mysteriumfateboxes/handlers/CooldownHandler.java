@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public class CooldownHandler {
     private static final Map<UUID, Long> cooldowns = new HashMap<>();
-    public static final int COOLDOWN_SECONDS = 15; // Change this to whatever you want
+    public static final int COOLDOWN_SECONDS = 26; // Change this to whatever you want
 
     public static boolean isOnCooldown(Player player) {
         return cooldowns.containsKey(player.getUUID()) && cooldowns.get(player.getUUID()) > System.currentTimeMillis();

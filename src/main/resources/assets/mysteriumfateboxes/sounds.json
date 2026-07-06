@@ -1,16 +1,23 @@
 {
-  "mysterium_fateboxes_good_luck": {
+  "mysterium_fateboxes_good_fate": {
     "category": "player",
-    "subtitle": "mysteriumfateboxes.subtitle.mysterium_fateboxes_good_luck",
+    "subtitle": "mysteriumfateboxes.subtitle.mysterium_fateboxes_good_fate",
     "sounds": [
-      "mysteriumfateboxes:mysterium_fateboxes_good_luck"
+      "mysteriumfateboxes:mysterium_fateboxes_good_fate"
     ]
   },
-  "mysterium_fateboxes_bad_luck": {
+  "mysterium_fateboxes_bad_fate": {
     "category": "player",
-    "subtitle": "mysteriumfateboxes.subtitle.mysterium_fateboxes_bad_luck",
+    "subtitle": "mysteriumfateboxes.subtitle.mysterium_fateboxes_bad_fate",
     "sounds": [
-      "mysteriumfateboxes:mysterium_fateboxes_bad_luck"
+      "mysteriumfateboxes:mysterium_fateboxes_bad_fate"
+    ]
+  },
+  "mysterium_fateboxes_open_fatebox": {
+    "category": "player",
+    "subtitle": "mysteriumfateboxes.subtitle.mysterium_fateboxes_open_fatebox",
+    "sounds": [
+      "mysteriumfateboxes:mysterium_fateboxes_open_fatebox"
     ]
   }
 }

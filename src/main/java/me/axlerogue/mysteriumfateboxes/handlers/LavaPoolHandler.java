@@ -7,13 +7,14 @@ import net.minecraft.world.level.block.Blocks;
 
 public class LavaPoolHandler {
     public static void createPool(Level level, BlockPos pos, Player player) {
+        BlockPos playerPos = player.blockPosition(); // Use the player's exact position instead of the block's
         int radius = 3; // 3 block radius makes a nice 7x7 circle
 
         for (int x = -radius; x <= radius; x++) {
             for (int z = -radius; z <= radius; z++) {
                 // Check if the point is within the circle (x^2 + z^2 <= r^2)
                 if (x * x + z * z <= radius * radius) {
-                    BlockPos targetPos = pos.offset(x, -1, z); // One block down so they fall into it
+                    BlockPos targetPos = playerPos.offset(x, -1, z); // One block down so they fall into it
                     
                     // Don't replace the exact block the player is standing on right away to give them a split second
                     if (x == 0 && z == 0) {
@@ -29,6 +30,6 @@ public class LavaPoolHandler {
         }
         
         // Teleport the player exactly to the center of the trap (on top of the obsidian block)
-        player.teleportTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
+        player.teleportTo(playerPos.getX() + 0.5, playerPos.getY(), playerPos.getZ() + 0.5);
     }
 }
