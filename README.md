@@ -23,12 +23,15 @@ When you unlock a Mysterium Fate Box, you experience a dynamic **Roll Chance Sys
 The system rolls a number from 1 to 100, modified dynamically by your hidden **Fate Level** (LOW, MID, or HIGH), directly altering your chances of certain outcomes.
 
 ### 🟢 Good Fate (Rewards)
-If the odds are in your favor, a joyful sound plays, you receive a green chat message (detailing your Fate Level), and you are rewarded. A 25% chance grants you one of five incredible reward categories. Missing this roll still gives a fallback item reward!
+If the odds are in your favor, a joyful sound plays, you receive a green chat message (detailing your Fate Level), and you are rewarded. A 25% chance grants you one of five incredible reward categories. Missing this roll triggers the Woolarama event (45% chance) or gives a fallback item reward!
+
+* **On-Screen Titles:** If you get a major Gift reward, your screen will light up with a diamond blue "The Mysterium Fate Box has decided a gift!" text.
 1. **Valuable Items:** Drops 1-3 highly valuable items (Diamonds, Emeralds, Netherite Ingots, Totems of Undying, Enchanted Golden Apples, blocks of precious metals, etc.).
 2. **Weapons:** Drops a random high-tier weapon (Diamond/Netherite Swords, Bows, Crossbows, Tridents).
 3. **Armor Sets:** Drops an entire, full set of armor at once! Ranges from Iron and Gold to Diamond and Netherite.
 4. **Tools:** Drops a random high-tier tool (Diamond/Netherite Pickaxes, Axes, Shovels, or Hoes).
 5. **Food:** Drops a stack of high-tier food in multiples of 2 (up to 16 items). Includes Golden Carrots, Cooked Beef, Pumpkin Pies, and more.
+6. **Woolarama Event:** (45% chance after gift roll fails) Drops 16 to 32 vibrantly colored rainbow sheep from the sky with a Slow Falling effect, complete with an animated "WOOLARAMA!!!" rainbow title screen!
 
 ### 🔴 Bad Fate (Punishments)
 If your luck runs out, an ominous sound plays, a red chat message appears, and one of several terrifying punishments is unleashed depending on your exact roll:

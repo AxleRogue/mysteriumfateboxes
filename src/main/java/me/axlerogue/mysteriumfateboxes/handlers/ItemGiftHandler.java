@@ -6,6 +6,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 public class ItemGiftHandler {
@@ -16,7 +17,8 @@ public class ItemGiftHandler {
             Items.DIAMOND_BLOCK, Items.EMERALD_BLOCK, Items.GOLD_BLOCK, Items.IRON_BLOCK, Items.NETHERITE_SCRAP
     };
 
-    public static void giftRandomItem(Level level, BlockPos pos) {
+    public static void giftRandomItem(Level level, BlockPos pos, Player player) {
+        GiftTitleHandler.sendGiftTitle(player);
         Item randomItem = VALUABLE_ITEMS[RANDOM.nextInt(VALUABLE_ITEMS.length)];
         int amount = RANDOM.nextInt(3) + 1; // 1 to 3 items
         

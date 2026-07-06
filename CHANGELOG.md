@@ -2,6 +2,12 @@
 
 ## [1.0.4-release] - 2026-07-06
 
+### Added
+* **Woolarama Event**: A spectacular new Good Fate event! A 45% chance to trigger an event that drops 16 to 32 vibrant, randomly colored sheep from the sky equipped with the Slow Falling effect.
+* **Animated Titles & Screen Feedback**: 
+  * Triggering the Woolarama event displays a massive, rainbow-animated "WOOLARAMA!!!" title screen.
+  * Receiving any of the major Gift rewards (Items, Weapons, Armor Sets, Tools, Food) now displays a brilliant diamond blue "The Mysterium Fate Box has decided a gift!" title on screen.
+
 ### Changed
 * **Code Refactoring & Cleanup**: Rewrote and cleaned up backend code logic across the mod for efficiency and maintainability. Properly formatted variables, unused imports, and unused parameters across multiple handlers.
 * **Bad Fate Traps Targeting**: Horde spawn traps (Zombies, Husks, Drowned) and the Wither Boss trap now actively track and spawn relative to the player's exact position instead of the initial Fate Box location.

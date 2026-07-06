@@ -6,6 +6,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 public class WeaponGiftHandler {
@@ -15,7 +16,8 @@ public class WeaponGiftHandler {
             Items.GOLDEN_SWORD, Items.IRON_SWORD
     };
 
-    public static void giftRandomWeapon(Level level, BlockPos pos) {
+    public static void giftRandomWeapon(Level level, BlockPos pos, Player player) {
+        GiftTitleHandler.sendGiftTitle(player);
         Item randomWeapon = WEAPONS[RANDOM.nextInt(WEAPONS.length)];
         ItemStack reward = new ItemStack(randomWeapon, 1);
         ItemEntity itemEntity = new ItemEntity(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, reward);

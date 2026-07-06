@@ -6,6 +6,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 public class ArmorSetGiftHandler {
@@ -17,7 +18,8 @@ public class ArmorSetGiftHandler {
             {Items.GOLDEN_HELMET, Items.GOLDEN_CHESTPLATE, Items.GOLDEN_LEGGINGS, Items.GOLDEN_BOOTS}
     };
 
-    public static void giftRandomArmorSet(Level level, BlockPos pos) {
+    public static void giftRandomArmorSet(Level level, BlockPos pos, Player player) {
+        GiftTitleHandler.sendGiftTitle(player);
         Item[] randomSet = ARMOR_SETS[RANDOM.nextInt(ARMOR_SETS.length)];
         for (Item armorPiece : randomSet) {
             ItemStack reward = new ItemStack(armorPiece, 1);

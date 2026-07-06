@@ -6,6 +6,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 public class FoodGiftHandler {
@@ -16,7 +17,8 @@ public class FoodGiftHandler {
             Items.COOKED_CHICKEN, Items.COOKED_MUTTON, Items.COOKED_SALMON
     };
 
-    public static void giftRandomFood(Level level, BlockPos pos) {
+    public static void giftRandomFood(Level level, BlockPos pos, Player player) {
+        GiftTitleHandler.sendGiftTitle(player);
         Item randomFood = FOOD_ITEMS[RANDOM.nextInt(FOOD_ITEMS.length)];
         
         // Multiples of 2, between 2 and 16 items

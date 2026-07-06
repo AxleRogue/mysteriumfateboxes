@@ -6,6 +6,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 public class ToolGiftHandler {
@@ -16,7 +17,8 @@ public class ToolGiftHandler {
             Items.IRON_PICKAXE, Items.IRON_AXE, Items.GOLDEN_PICKAXE
     };
 
-    public static void giftRandomTool(Level level, BlockPos pos) {
+    public static void giftRandomTool(Level level, BlockPos pos, Player player) {
+        GiftTitleHandler.sendGiftTitle(player);
         Item randomTool = TOOLS[RANDOM.nextInt(TOOLS.length)];
         ItemStack reward = new ItemStack(randomTool, 1);
         ItemEntity itemEntity = new ItemEntity(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, reward);
