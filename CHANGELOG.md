@@ -5,6 +5,9 @@
 ### Added
 * **Wither Boss Ambush**: Added a deadly new trap to the Bad Fate event. Rolling a 5% chance on a HIGH Bad Fate Level will now simultaneously spawn 4 Wither Bosses around the player's position!
 
+### Changed
+* **Recipe & Advancements**: Replaced `has_nether_star` and `nether_star` with `has_diamond` and `diamond` in advancements and recipes. The recipe character key `S` was also replaced with `D` for the diamond requirement.
+
 ## [1.0.1-release] - 2026-07-05
 
 ### Added
