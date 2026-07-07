@@ -8,6 +8,7 @@
 
 ### Changed
 * **Code Cleanup**: Removed the unused and deprecated `roll` parameter from the fate execution handlers.
+* **Texture Update**: Updated the Fate Box texture to improve visual clarity and contrast.
 
 ## [1.0.5-release] - 2026-07-06
 
