@@ -19,8 +19,12 @@ public class PlayOpenFateBoxSoundHandler {
             // Wait for the sound to finish, then play fireworks and do the rest of the actions
             CompletableFuture.runAsync(() -> {}, CompletableFuture.delayedExecutor(SOUND_DURATION_SECONDS, TimeUnit.SECONDS))
                     .thenRunAsync(() -> {
-                        PlayFireWorksSoundHandler.handle(level, pos);
-                        ChoiceHandler.executeFate(level, pos, player);
+                        net.minecraft.world.level.block.state.BlockState currentState = level.getBlockState(pos);
+                        if (currentState.getBlock() instanceof me.axlerogue.mysteriumfateboxes.block.MysteriumFateBoxBlock) {
+                            level.removeBlock(pos, false);
+                            PlayFireWorksSoundHandler.handle(level, pos);
+                            ChoiceHandler.executeFate(level, pos, player);
+                        }
                     }, level.getServer());
         }
     }

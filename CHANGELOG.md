@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.5-release] - 2026-07-06
+
+### Added
+* **Dynamic Reward & Punishment Tiering**: Completely overhauled how items, weapons, armor, tools, food, traps, and mob spawns are distributed. They are now strictly filtered into **Low**, **Mid**, and **High** tiers based on the `FateLevelType` that rolls!
+  * **Traps**: Explosions (Low Fate), Flaming Arrows (Mid Fate), Lava Pools (High Fate).
+  * **Mob Hordes**: Drowned (Low Fate), Husks (Mid Fate), Zombies (High Fate).
+  * **Bosses & Events**: Wither Bosses and the Woolarama Event will now only trigger on **High** Fate levels.
+* **15-Second Opening Suspense**: The Fate Box opening sequence has been increased from 3 seconds to a suspenseful 15 seconds.
+* **Spinning Block Animation**: During the 15-second opening sequence, the Fate Box will now rapidly spin around on the Y-axis until it detonates!
+
+### Changed
+* **Precise Item Drop Tracking**: All Good Fate reward handlers (Items, Weapons, Armor, Tools, Food) now actively track the player's exact `blockPosition()` at the moment the 15-second timer ends, ensuring your rewards spawn exactly where you are standing, not where you left the Fate Box!
+* **Model Rendering Optimization**: The block model JSON files were split into base and diamond components behind the scenes for cleaner structural rendering.
+
 ## [1.0.4-release] - 2026-07-06
 
 ### Added

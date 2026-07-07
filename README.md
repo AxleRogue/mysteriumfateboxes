@@ -18,12 +18,12 @@ The mystical key required to unlock the Fate Box's secrets. Right-clicking a Fat
 
 ## 🎲 The Fate System
 
-When you unlock a Mysterium Fate Box, you experience a dynamic **Roll Chance System**. A 3-second opening sequence initiates with custom sounds and effects before your fate is revealed. 
+When you unlock a Mysterium Fate Box, you experience a dynamic **Roll Chance System**. A 15-second opening sequence initiates with custom sounds, and the block itself rapidly spins on its axis as the suspense builds before your fate is revealed!
 
-The system rolls a number from 1 to 100, modified dynamically by your hidden **Fate Level** (LOW, MID, or HIGH), directly altering your chances of certain outcomes.
+The system rolls a number from 1 to 100, modified dynamically by your hidden **Fate Level** (LOW, MID, or HIGH). In version 1.0.5, this Fate Level strictly determines the tier and intensity of the rewards or punishments you face!
 
 ### 🟢 Good Fate (Rewards)
-If the odds are in your favor, a joyful sound plays, you receive a green chat message (detailing your Fate Level), and you are rewarded. A 25% chance grants you one of five incredible reward categories. Missing this roll triggers the Woolarama event (45% chance) or gives a fallback item reward!
+If the odds are in your favor, a joyful sound plays, you receive a green chat message (detailing your Fate Level), and you are rewarded. A 25% chance grants you one of five incredible reward categories. Rewards dynamically drop directly at your feet even if you ran away from the box! Missing this roll triggers the Woolarama event (High Fate only) or gives a fallback item reward!
 
 * **On-Screen Titles:** 
   * If you get a major Gift reward, your screen will light up with a diamond blue "A MYSTICAL GIFT!" text.
@@ -31,20 +31,25 @@ If the odds are in your favor, a joyful sound plays, you receive a green chat me
   * Triggering trap events (Explosion, Lava Pool, Arrows) displays a red "TRAP TRIGGERED!" title.
   * Spawning mob hordes displays a red "UNDEAD HORDE!" title.
   * Spawning the Wither Boss ambush displays a red "WITHER CURSE!" title.
-1. **Valuable Items:** Drops 1-3 highly valuable items (Diamonds, Emeralds, Netherite Ingots, Totems of Undying, Enchanted Golden Apples, blocks of precious metals, etc.).
-2. **Weapons:** Drops a random high-tier weapon (Diamond/Netherite Swords, Bows, Crossbows, Tridents).
-3. **Armor Sets:** Drops an entire, full set of armor at once! Ranges from Iron and Gold to Diamond and Netherite.
-4. **Tools:** Drops a random high-tier tool (Diamond/Netherite Pickaxes, Axes, Shovels, or Hoes).
-5. **Food:** Drops a stack of high-tier food in multiples of 2 (up to 16 items). Includes Golden Carrots, Cooked Beef, Pumpkin Pies, and more.
-6. **Woolarama Event:** (45% chance after gift roll fails) Drops 16 to 32 vibrantly colored rainbow sheep from the sky with a Slow Falling effect, complete with an animated "WOOLARAMA!" rainbow title screen!
+1. **Valuable Items:** Drops 1-3 valuable items tiered by Fate (Low: Iron/Pearls | Mid: Gold/Diamond/Emeralds | High: Netherite/Totems/Enchanted Apples).
+2. **Weapons:** Drops a random weapon tiered by Fate (Low: Iron/Bow | Mid: Diamond/Gold/Crossbow | High: Netherite/Trident).
+3. **Armor Sets:** Drops an entire, full set of armor at once tiered by Fate!
+4. **Tools:** Drops a random tool tiered by Fate.
+5. **Food:** Drops a stack of high-tier food in multiples of 2 (up to 16 items) tiered by Fate.
+6. **Woolarama Event:** (High Fate Only) Drops 16 to 32 vibrantly colored rainbow sheep from the sky with a Slow Falling effect, complete with an animated "WOOLARAMA!" rainbow title screen!
 
 ### 🔴 Bad Fate (Punishments)
-If your luck runs out, an ominous sound plays, a red chat message appears, and one of several terrifying punishments is unleashed depending on your exact roll:
-1. **Wither Boss Ambush:** If you hit a 5% chance roll on a HIGH Fate Level, 4 Wither Bosses will spawn simultaneously around you!
-2. **TNT Explosion (50% bracket):** A sudden, raw explosion exactly at your location.
-3. **Raining Flaming Arrows (15% bracket):** An army of unseen archers fires 25 to 50 flaming arrows high into the sky, raining down over a 20x20 area with dynamic arcing vectors targeting your position.
-4. **Lava Pool Trap (10% bracket):** Instantly generates a 7x7 circular pool of lava directly beneath your feet, no matter where you ran.
-5. **Mob Hordes (25% bracket):** Spawns 4 to 7 Zombies, Husks, or Drowned surrounding you. *Beware: Each mob has a 33% chance to spawn as an "Elite" wearing full Netherite Armor and wielding a Netherite weapon!*
+If your luck runs out, an ominous sound plays, a red chat message appears, and one of several terrifying punishments is unleashed depending on your exact roll and Fate Level:
+1. **Wither Boss Ambush:** If you hit a 15% chance roll on a HIGH Fate Level, 4 Wither Bosses will spawn simultaneously around you!
+2. **Traps:** 
+   * **Low Fate:** A raw TNT Explosion exactly at your location.
+   * **Mid Fate:** Raining Flaming Arrows! 25 to 50 arrows arc towards you over a 20x20 area.
+   * **High Fate:** Lava Pool! A 7x7 circular pool of lava spawns directly beneath your feet.
+3. **Mob Hordes:** Spawns 4 to 7 enemies surrounding you based on your Fate level:
+   * **Low Fate:** Drowned Horde.
+   * **Mid Fate:** Husk Horde.
+   * **High Fate:** Zombie Horde.
+   * *Beware: Each mob has a 33% chance to spawn as an "Elite" wearing full Netherite Armor and wielding a Netherite weapon!*
 
 ---
 
@@ -58,7 +63,7 @@ If your luck runs out, an ominous sound plays, a red chat message appears, and o
 
 ## 🛠️ Installation
 1. Install **NeoForge 26.2**.
-2. Drop the `mysteriumfateboxes-1.0.4-release.jar` into your `.minecraft/mods` folder.
+2. Drop the `mysteriumfateboxes-1.0.5-release.jar` into your `.minecraft/mods` folder.
 3. Load up your world and test your fate!
 
 ---

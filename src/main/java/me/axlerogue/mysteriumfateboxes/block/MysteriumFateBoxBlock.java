@@ -17,8 +17,11 @@ public class MysteriumFateBoxBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<MysteriumFateBoxBlock> CODEC = simpleCodec(MysteriumFateBoxBlock::new);
     public static final VoxelShape SHAPE = Block.box(4, 0, 4, 12, 8, 12);
 
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty OPENING = net.minecraft.world.level.block.state.properties.BooleanProperty.create("opening");
+
     public MysteriumFateBoxBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, net.minecraft.core.Direction.NORTH).setValue(OPENING, false));
     }
 
     @Override
@@ -33,7 +36,7 @@ public class MysteriumFateBoxBlock extends HorizontalDirectionalBlock {
 
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(OPENING, false);
     }
 
     @Override
@@ -43,13 +46,19 @@ public class MysteriumFateBoxBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected net.minecraft.world.InteractionResult useItemOn(net.minecraft.world.item.ItemStack itemStack, BlockState state, net.minecraft.world.level.Level level, BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.world.InteractionHand hand, net.minecraft.world.phys.BlockHitResult hitResult) {
+        if (state.getValue(OPENING)) {
+            return net.minecraft.world.InteractionResult.PASS;
+        }
+
         if (itemStack.is(me.axlerogue.mysteriumfateboxes.registry.ModItems.MYSTERIUM_FATE_BOX_KEY.get())) {
             if (!level.isClientSide()) {
                 if (me.axlerogue.mysteriumfateboxes.handlers.CooldownHandler.isOnCooldown(player)) {
                     long remaining = me.axlerogue.mysteriumfateboxes.handlers.CooldownHandler.getRemainingCooldown(player);
                     me.axlerogue.mysteriumfateboxes.handlers.ColorableCoolDownMessageHandler.sendOnCooldownMessage(player, remaining);
                 } else {
-                    level.removeBlock(pos, false);
+                    level.setBlock(pos, state.setValue(OPENING, true), 3);
+                    level.scheduleTick(pos, this, 2);
+                    
                     if (!player.isCreative()) {
                         itemStack.shrink(1);
                     }
@@ -64,7 +73,17 @@ public class MysteriumFateBoxBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
+    protected void tick(BlockState state, net.minecraft.server.level.ServerLevel level, BlockPos pos, net.minecraft.util.RandomSource random) {
+        if (state.getValue(OPENING)) {
+            net.minecraft.core.Direction currentFacing = state.getValue(FACING);
+            net.minecraft.core.Direction nextFacing = currentFacing.getClockWise();
+            level.setBlock(pos, state.setValue(FACING, nextFacing), 3);
+            level.scheduleTick(pos, this, 2);
+        }
+    }
+
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, OPENING);
     }
 }

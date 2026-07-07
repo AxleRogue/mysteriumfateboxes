@@ -11,16 +11,23 @@ import net.minecraft.world.level.Level;
 
 public class WeaponGiftHandler {
     private static final Random RANDOM = new Random();
-    private static final Item[] WEAPONS = {
-            Items.DIAMOND_SWORD, Items.NETHERITE_SWORD, Items.BOW, Items.CROSSBOW, Items.TRIDENT,
-            Items.GOLDEN_SWORD, Items.IRON_SWORD
-    };
+    private static final Item[] LOW_WEAPONS = { Items.IRON_SWORD, Items.BOW };
+    private static final Item[] MID_WEAPONS = { Items.GOLDEN_SWORD, Items.DIAMOND_SWORD, Items.CROSSBOW };
+    private static final Item[] HIGH_WEAPONS = { Items.NETHERITE_SWORD, Items.TRIDENT };
 
-    public static void giftRandomWeapon(Level level, BlockPos pos, Player player) {
+    public static void giftRandomWeapon(Level level, BlockPos pos, Player player, FateLevelTypeEnum fateLevel) {
         GiftTitleHandler.sendGiftTitle(player);
-        Item randomWeapon = WEAPONS[RANDOM.nextInt(WEAPONS.length)];
+        Item[] weaponSet;
+        switch (fateLevel) {
+            case LOW: weaponSet = LOW_WEAPONS; break;
+            case MID: weaponSet = MID_WEAPONS; break;
+            case HIGH: weaponSet = HIGH_WEAPONS; break;
+            default: weaponSet = LOW_WEAPONS; break;
+        }
+        Item randomWeapon = weaponSet[RANDOM.nextInt(weaponSet.length)];
+        BlockPos playerPos = player.blockPosition();
         ItemStack reward = new ItemStack(randomWeapon, 1);
-        ItemEntity itemEntity = new ItemEntity(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, reward);
+        ItemEntity itemEntity = new ItemEntity(level, playerPos.getX() + 0.5, playerPos.getY() + 0.5, playerPos.getZ() + 0.5, reward);
         level.addFreshEntity(itemEntity);
     }
 }

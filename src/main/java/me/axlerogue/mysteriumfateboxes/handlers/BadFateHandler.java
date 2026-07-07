@@ -12,28 +12,35 @@ public class BadFateHandler {
         PlayFateSoundHandler.playSound(level, pos, false);
         ColorableFateMessageHandler.sendFateMessage(player, false, "You received Bad Fate! (" + fateLevel.name() + " Fate)");
 
-        if (fateLevel == FateLevelTypeEnum.HIGH && RANDOM.nextInt(100) < 5) {
+        if (fateLevel == FateLevelTypeEnum.HIGH && RANDOM.nextInt(100) < 15) {
             WitherBossHandler.spawnWithers(level, player);
             return;
         }
 
-        if (roll <= 50) {
-            ExplosionDetonationHandler.detonate(level, player);
-        } else if (roll <= 65) {
-            RainingFlamingArrowsHandler.rainArrows(level, player);
-        } else if (roll <= 75) {
-            LavaPoolHandler.createPool(level, player);
-        } else {
-            int hordeType = RANDOM.nextInt(3);
-            switch (hordeType) {
-                case 0:
-                    ZombieHordeHandler.spawnHorde(level, player);
+        boolean isTrap = RANDOM.nextBoolean();
+
+        if (isTrap) {
+            switch (fateLevel) {
+                case LOW:
+                    ExplosionDetonationHandler.detonate(level, player);
                     break;
-                case 1:
+                case MID:
+                    RainingFlamingArrowsHandler.rainArrows(level, player);
+                    break;
+                case HIGH:
+                    LavaPoolHandler.createPool(level, player);
+                    break;
+            }
+        } else {
+            switch (fateLevel) {
+                case LOW:
+                    DrownedHordeHandler.spawnHorde(level, player);
+                    break;
+                case MID:
                     HuskHordeHandler.spawnHorde(level, player);
                     break;
-                case 2:
-                    DrownedHordeHandler.spawnHorde(level, player);
+                case HIGH:
+                    ZombieHordeHandler.spawnHorde(level, player);
                     break;
             }
         }

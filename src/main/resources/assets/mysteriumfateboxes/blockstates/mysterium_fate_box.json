@@ -1,8 +1,12 @@
 {
     "variants": {
-        "facing=north": { "model": "mysteriumfateboxes:block/mysterium_fate_box" },
-        "facing=south": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 180 },
-        "facing=west": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 270 },
-        "facing=east": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 90 }
+        "facing=north,opening=false": { "model": "mysteriumfateboxes:block/mysterium_fate_box" },
+        "facing=south,opening=false": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 180 },
+        "facing=west,opening=false": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 270 },
+        "facing=east,opening=false": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 90 },
+        "facing=north,opening=true": { "model": "mysteriumfateboxes:block/mysterium_fate_box" },
+        "facing=south,opening=true": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 180 },
+        "facing=west,opening=true": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 270 },
+        "facing=east,opening=true": { "model": "mysteriumfateboxes:block/mysterium_fate_box", "y": 90 }
     }
 }
