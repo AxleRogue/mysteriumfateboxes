@@ -8,12 +8,17 @@ import net.minecraft.world.level.Level;
 public class GoodFateHandler {
     private static final Random RANDOM = new Random();
 
-    public static void handleGoodFate(Level level, BlockPos pos, Player player, int roll, FateLevelTypeEnum fateLevel) {
+    public static void handleGoodFate(Level level, BlockPos pos, Player player, FateLevelTypeEnum fateLevel) {
         PlayFateSoundHandler.playSound(level, pos, true);
         ColorableFateMessageHandler.sendFateMessage(player, true, "You received Good Fate! (" + fateLevel.name() + " Fate)");
         
         if (fateLevel == FateLevelTypeEnum.HIGH && RANDOM.nextInt(100) < 20) {
             ColoredSheepHandler.spawnSheep(level, player);
+            return;
+        }
+
+        if (fateLevel == FateLevelTypeEnum.MID && RANDOM.nextInt(100) < 20) {
+            TamedWolfHandler.spawnWolves(level, player);
             return;
         }
 

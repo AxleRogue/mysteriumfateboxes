@@ -37,15 +37,17 @@ If the odds are in your favor, a joyful sound plays, you receive a green chat me
 4. **Tools:** Drops a random tool tiered by Fate.
 5. **Food:** Drops a stack of high-tier food in multiples of 2 (up to 16 items) tiered by Fate.
 6. **Woolarama Event:** (High Fate Only) Drops 16 to 32 vibrantly colored rainbow sheep from the sky with a Slow Falling effect, complete with an animated "WOOLARAMA!" rainbow title screen!
+7. **Happy Puppers Event:** (Mid Fate Only) Drops 16 to 32 pre-tamed, slow-falling wolves from the sky directly at your position, each with a randomized variant and collar color! Includes an animated "HAPPY PUPPERS!" title screen.
 
 ### 🔴 Bad Fate (Punishments)
 If your luck runs out, an ominous sound plays, a red chat message appears, and one of several terrifying punishments is unleashed depending on your exact roll and Fate Level:
 1. **Wither Boss Ambush:** If you hit a 15% chance roll on a HIGH Fate Level, 4 Wither Bosses will spawn simultaneously around you!
-2. **Traps:** 
+2. **Angry Puppers:** If you hit a 20% chance roll on a HIGH Fate Level, 16 to 32 slow-falling, extremely aggressive wolves will drop from the sky and immediately target you!
+3. **Traps:** 
    * **Low Fate:** A raw TNT Explosion exactly at your location.
    * **Mid Fate:** Raining Flaming Arrows! 25 to 50 arrows arc towards you over a 20x20 area.
    * **High Fate:** Lava Pool! A 7x7 circular pool of lava spawns directly beneath your feet.
-3. **Mob Hordes:** Spawns 4 to 7 enemies surrounding you based on your Fate level:
+4. **Mob Hordes:** Spawns 4 to 7 enemies surrounding you based on your Fate level:
    * **Low Fate:** Drowned Horde.
    * **Mid Fate:** Husk Horde.
    * **High Fate:** Zombie Horde.
@@ -63,7 +65,7 @@ If your luck runs out, an ominous sound plays, a red chat message appears, and o
 
 ## 🛠️ Installation
 1. Install **NeoForge 26.2**.
-2. Drop the `mysteriumfateboxes-1.0.5-release.jar` into your `.minecraft/mods` folder.
+2. Drop the `mysteriumfateboxes-1.0.6-release.jar` into your `.minecraft/mods` folder.
 3. Load up your world and test your fate!
 
 ---

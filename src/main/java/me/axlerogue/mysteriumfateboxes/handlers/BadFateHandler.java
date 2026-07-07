@@ -8,12 +8,17 @@ import net.minecraft.world.level.Level;
 public class BadFateHandler {
     private static final Random RANDOM = new Random();
 
-    public static void handleBadFate(Level level, BlockPos pos, Player player, int roll, FateLevelTypeEnum fateLevel) {
+    public static void handleBadFate(Level level, BlockPos pos, Player player, FateLevelTypeEnum fateLevel) {
         PlayFateSoundHandler.playSound(level, pos, false);
         ColorableFateMessageHandler.sendFateMessage(player, false, "You received Bad Fate! (" + fateLevel.name() + " Fate)");
 
         if (fateLevel == FateLevelTypeEnum.HIGH && RANDOM.nextInt(100) < 15) {
             WitherBossHandler.spawnWithers(level, player);
+            return;
+        }
+
+        if (fateLevel == FateLevelTypeEnum.HIGH && RANDOM.nextInt(100) < 20) {
+            AngryWolfHandler.spawnWolves(level, player);
             return;
         }
 

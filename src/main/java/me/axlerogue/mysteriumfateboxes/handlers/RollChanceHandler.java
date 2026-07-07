@@ -23,22 +23,10 @@ public class RollChanceHandler {
         FateTypeEnum fateType = getFateType();
         FateLevelTypeEnum fateLevel = getFateLevel();
 
-        int roll = RANDOM.nextInt(100) + 1; // 1 to 100
-
-        // Incorporate Fate level into the roll for more depth
-        if (fateLevel == FateLevelTypeEnum.LOW) {
-            roll -= 10;
-        } else if (fateLevel == FateLevelTypeEnum.HIGH) {
-            roll += 10;
-        }
-
-        // Keep roll within bounds
-        roll = Math.max(1, Math.min(100, roll));
-
         if (fateType == FateTypeEnum.GOOD) {
-            GoodFateHandler.handleGoodFate(level, pos, player, roll, fateLevel);
+            GoodFateHandler.handleGoodFate(level, pos, player, fateLevel);
         } else {
-            BadFateHandler.handleBadFate(level, pos, player, roll, fateLevel);
+            BadFateHandler.handleBadFate(level, pos, player, fateLevel);
         }
     }
 }

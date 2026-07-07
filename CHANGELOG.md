@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.6-release] - 2026-07-07
+
+### Added
+* **Happy Puppers Event**: A highly anticipated new Good Fate event! A 20% chance to trigger an event on a MID Fate Level that drops 16 to 32 pre-tamed, slow-falling wolves from the sky directly onto the player's position. Each wolf features a randomized collar color and variant model, paired with an animated "HAPPY PUPPERS!" title screen!
+* **Angry Puppers Event**: The chaotic counterpart! A 20% chance to trigger an event on a HIGH Bad Fate Level that drops 16 to 32 angered, slow-falling wolves from the sky that immediately target the player who opened the box. Accompanied by a bold red "ANGRY PUPPERS!" title screen!
+
+### Changed
+* **Code Cleanup**: Removed the unused and deprecated `roll` parameter from the fate execution handlers.
+
 ## [1.0.5-release] - 2026-07-06
 
 ### Added
