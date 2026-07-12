@@ -3,13 +3,15 @@ package me.axlerogue.mysteriumfateboxes.handlers.util.handlers;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import me.axlerogue.mysteriumfateboxes.Config;
 import net.minecraft.world.entity.player.Player;
 
 public class CooldownHandler {
     private static final Map<UUID, Long> cooldowns = new HashMap<>();
-    public static final int COOLDOWN_SECONDS = 26; // Change this to whatever you want
+    public static final int COOLDOWN_SECONDS = 24; // Change this to whatever you want
 
     public static boolean isOnCooldown(Player player) {
+        if (Config.FATE_BOX_CONFIG.devMode.get()) return false;
         return cooldowns.containsKey(player.getUUID()) && cooldowns.get(player.getUUID()) > System.currentTimeMillis();
     }
 

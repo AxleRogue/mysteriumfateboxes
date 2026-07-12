@@ -7,6 +7,12 @@
   "mysteriumfateboxes.configuration.section.mysteriumfateboxes.common.toml": "Mysterium Fateboxes Configs",
   "mysteriumfateboxes.configuration.section.mysteriumfateboxes.common.toml.title": "Mysterium Fateboxes Configs",
 
+  "config.mysteriumfateboxes.category.fatebox_events": "Fate Box Events",
+  "config.mysteriumfateboxes.allowLavaPools": "Allow Lava Pool Traps",
+  "config.mysteriumfateboxes.allowExplosions": "Allow Explosion Traps",
+  "config.mysteriumfateboxes.allowWitherBoss": "Allow Wither Boss Ambush",
+  "config.mysteriumfateboxes.devMode": "Developer Mode",
+
   "mysteriumfateboxes.subtitle.mysterium_fateboxes_good_luck": "Good Fate!",
   "mysteriumfateboxes.subtitle.mysterium_fateboxes_bad_luck": "Bad Fate!",
   "mysteriumfateboxes.subtitle.mysterium_fateboxes_open_fatebox": "Fate Box Opens...",

@@ -59,7 +59,7 @@ If your luck runs out, an ominous sound plays, a red chat message appears, and o
 
 ## ⏱️ Mechanics & Systems
 
-* **Global Cooldowns:** To prevent spamming, the mod features a built-in 26-second cooldown. If you try to open another box while on cooldown, you will receive a bold red warning message indicating how much time is left.
+* **Global Cooldowns:** To prevent spamming, the mod features a built-in 24-second cooldown. If you try to open another box while on cooldown, you will receive a bold red warning message indicating how much time is left.
 * **Custom Advancements:** The mod comes with a fully integrated advancement tree ("Mysterium Fate") to guide players through crafting their first Box and Key, complete with a custom background UI.
 * **Safe Creative Mode:** If you are in Creative Mode, keys will *not* be consumed upon use.
 
@@ -76,6 +76,7 @@ If your luck runs out, an ominous sound plays, a red chat message appears, and o
 
 Mysterium Fateboxes includes a comprehensive configuration file that allows server owners and players to tailor the experience:
 * **Disable Destructive Events:** You can easily disable Explosions, Lava Pools, and Wither Boss spawns via the config file. If one of these events is rolled while disabled, the mod gracefully falls back to an appropriate Mob Horde to ensure the punishment still happens without destroying your world!
+* **Developer Mode:** A built-in toggle intended for Addon developers or curious players. Enabling `devMode` will completely remove the 24-second global cooldown, bypass the 15-second opening suspense sequence, and replace the custom mod sounds with vanilla sounds (Chest Open, Experience Orb, Ender Dragon Roar) so you can spam-open Fate Boxes rapidly for testing without deafening yourself with the suspense sounds!
 
 ---
 

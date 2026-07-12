@@ -5,8 +5,12 @@
 ### Added
 * **Configuration Options**: Added a new configuration file (`mysteriumfateboxes-server.toml` or via Mod Menu) powered by `FateBoxConfig`. Server owners and players can now toggle the spawning of Lava Pools, Explosions, and Wither Bosses. 
   * If a disabled trap/event is rolled, the system will dynamically fall back to an appropriate Mob Horde spawn to ensure the player still receives a Bad Fate punishment.
+  * Added `devMode` (Developer Mode) which bypasses the 24-second global cooldown and the 15-second opening suspense sequence. It also replaces the overlapping custom suspense sounds with short vanilla sounds (Chest open, XP drop, Dragon roar). This allows addon developers to rapidly spam-open Fate Boxes to test their custom injected events without blowing their ears out!
 * **API Configuration Access**: The `FateBoxConfig` class has been exposed in the Developer API. Addons can now read from or extend this configuration class to manage their own settings alongside the main mod!
 * **Improved Lava Pool Trap**: The Lava Pool Trap (High Bad Fate) now generates a solid bowl (randomly choosing between Obsidian and Stone) underneath and around the lava pool, rather than just replacing the blocks on the current layer, preventing the lava from breaking map terrain in unexpected ways or leaking downward.
+
+### Changed
+* **Global Cooldown**: Reduced the global cooldown for opening Fate Boxes from 26 seconds to 24 seconds.
 
 ## [1.0.7-release] - 2026-07-11
 

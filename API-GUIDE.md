@@ -49,7 +49,9 @@ In addition to custom events, the API also exposes base classes to allow you to 
 ### Configuration Base
 
 The API provides access to the `FateBoxConfig` configuration base.
-* `FateBoxConfig` - Found in `me.axlerogue.mysteriumfateboxes.api.configuration`. You can use `Config.FATE_BOX_CONFIG` to read core mod settings like `allowLavaPools`, `allowExplosions`, and `allowWitherBoss`. You can also extend this class or construct it with your own `ModConfigSpec.Builder` to easily add event-toggling configurations to your own addons!
+* `FateBoxConfig` - Found in `me.axlerogue.mysteriumfateboxes.api.configuration`. You can use `Config.FATE_BOX_CONFIG` to read core mod settings like `allowLavaPools`, `allowExplosions`, `allowWitherBoss`, and `devMode`. You can also extend this class or construct it with your own `ModConfigSpec.Builder` to easily add event-toggling configurations to your own addons!
+
+> **Tip for Addon Devs:** If you need to rapidly test your custom events in-game, be sure to enable **Developer Mode** (`devMode`) in the mod configuration! This bypasses the 15-second opening sequence, disables the 24-second global cooldown, and swaps out the loud, overlapping custom sounds with short vanilla sounds (Chest open, XP drop, Dragon roar) so you can spam-open Fate Boxes safely.
 
 ---
 
