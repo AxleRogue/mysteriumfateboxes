@@ -65,8 +65,16 @@ If your luck runs out, an ominous sound plays, a red chat message appears, and o
 
 ## 🛠️ Installation
 1. Install **NeoForge 26.2**.
-2. Drop the `mysteriumfateboxes-1.0.6-release.jar` into your `.minecraft/mods` folder.
+2. Drop the `mysteriumfateboxes-1.0.7-release.jar` into your `.minecraft/mods` folder.
 3. Load up your world and test your fate!
+
+---
+
+## 💻 Developer Addon API
+
+Mysterium Fateboxes now features a full-fledged Addon API, allowing other developers to create their own custom fate events, traps, loot drops, and bosses that run seamlessly alongside the vanilla mod logic!
+
+If you want to build an addon for this mod, check out the comprehensive documentation and tutorials on the **[Mysterium Fateboxes GitHub Wiki](https://github.com/AxleRogue/mysteriumfateboxes/wiki)**!
 
 ---
 

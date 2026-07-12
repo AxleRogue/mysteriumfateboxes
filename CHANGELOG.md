@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.7-release] - 2026-07-11
+
+### Added
+* **Developer Addon API**: Mysterium Fateboxes now features a robust Addon API allowing developers to hook custom events directly into the mod!
+  * Added core interfaces: `IFateHandler`, `IGoodFateHandler`, `IBadFateHandler`, `ITrapHandler`, `ILootDropHandler`, `IEntitySpawnHandler`, `IBossSpawnHandler`, `ITitleHandler`, `IChoiceHandler`, and `IRollChanceHandler`.
+  * Added `AbstractFateBoxBlock` and `AbstractFateBoxKeyItem` so addons can create their own custom blocks that hook right into the 15-second spinning state and cooldown logic.
+  * Added `FateEventRegistry` allowing addons to seamlessly register custom Good and Bad Fates to compete natively with default mod logic.
+  * Added comprehensive API Developer documentation to the GitHub Wiki.
+
+### Changed
+* **Code Refactoring & Cleanup**: Extracted the Woolarama Event and Happy/Angry Puppers Event titles into their own dedicated animated title handlers (`WoolaramaTitleHandler` and `PuppersTitleHandler`) to improve handler package organization and clean up event classes.
+* **API Integration**: Core `GoodFateHandler` and `BadFateHandler` refactored to query the `FateEventRegistry`, allowing registered addon fates to override vanilla static executions dynamically based on assigned weights.
+
 ## [1.0.6-release] - 2026-07-07
 
 ### Added

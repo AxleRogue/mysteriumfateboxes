@@ -1,8 +1,8 @@
 package me.axlerogue.mysteriumfateboxes.item;
 
-import net.minecraft.world.item.Item;
+import me.axlerogue.mysteriumfateboxes.api.item.AbstractFateBoxKeyItem;
 
-public class MysteriumFateBoxKeyItem extends Item {
+public class MysteriumFateBoxKeyItem extends AbstractFateBoxKeyItem {
     public MysteriumFateBoxKeyItem(Properties properties) {
         super(properties);
     }
