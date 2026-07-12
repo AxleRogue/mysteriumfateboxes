@@ -5,6 +5,7 @@ import java.util.Random;
 
 import me.axlerogue.mysteriumfateboxes.api.handlers.IBadFateHandler;
 import me.axlerogue.mysteriumfateboxes.api.registry.FateEventRegistry;
+import me.axlerogue.mysteriumfateboxes.Config;
 import me.axlerogue.mysteriumfateboxes.handlers.event.handlers.*;
 import me.axlerogue.mysteriumfateboxes.handlers.sound.handlers.PlayFateSoundHandler;
 import net.minecraft.core.BlockPos;
@@ -36,7 +37,7 @@ public class BadFateHandler {
             }
         }
 
-        if (fateLevel == FateLevelTypeEnum.HIGH && RANDOM.nextInt(100) < 15) {
+        if (Config.FATE_BOX_CONFIG.allowWitherBoss.get() && fateLevel == FateLevelTypeEnum.HIGH && RANDOM.nextInt(100) < 15) {
             WitherBossHandler.spawnWithers(level, player);
             return;
         }
@@ -51,13 +52,21 @@ public class BadFateHandler {
         if (isTrap) {
             switch (fateLevel) {
                 case LOW:
-                    ExplosionDetonationHandler.detonate(level, player);
+                    if (Config.FATE_BOX_CONFIG.allowExplosions.get()) {
+                        ExplosionDetonationHandler.detonate(level, player);
+                    } else {
+                        DrownedHordeHandler.spawnHorde(level, player); // fallback
+                    }
                     break;
                 case MID:
                     RainingFlamingArrowsHandler.rainArrows(level, player);
                     break;
                 case HIGH:
-                    LavaPoolHandler.createPool(level, player);
+                    if (Config.FATE_BOX_CONFIG.allowLavaPools.get()) {
+                        LavaPoolHandler.createPool(level, player);
+                    } else {
+                        ZombieHordeHandler.spawnHorde(level, player); // fallback
+                    }
                     break;
             }
         } else {

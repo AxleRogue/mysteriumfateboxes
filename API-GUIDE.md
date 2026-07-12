@@ -46,6 +46,11 @@ In addition to custom events, the API also exposes base classes to allow you to 
 * `AbstractFateBoxBlock` - Extend this block to create a block with the exact same 15-second spinning and unlocking sequence as the Mysterium Fate Box. It handles the cooldowns and state logic automatically. You must implement `getCustomShape()` and `getRequiredKey()`.
 * `AbstractFateBoxKeyItem` - Extend this to create custom keys.
 
+### Configuration Base
+
+The API provides access to the `FateBoxConfig` configuration base.
+* `FateBoxConfig` - Found in `me.axlerogue.mysteriumfateboxes.api.configuration`. You can use `Config.FATE_BOX_CONFIG` to read core mod settings like `allowLavaPools`, `allowExplosions`, and `allowWitherBoss`. You can also extend this class or construct it with your own `ModConfigSpec.Builder` to easily add event-toggling configurations to your own addons!
+
 ---
 
 ## Creating Custom Fate Handlers

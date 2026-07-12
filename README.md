@@ -28,9 +28,11 @@ If the odds are in your favor, a joyful sound plays, you receive a green chat me
 * **On-Screen Titles:** 
   * If you get a major Gift reward, your screen will light up with a diamond blue "A MYSTICAL GIFT!" text.
   * Triggering the Woolarama event shows a rainbow-animated "WOOLARAMA!" title.
+  * Triggering the Happy Puppers event displays a joyful "HAPPY PUPPERS!" title.
   * Triggering trap events (Explosion, Lava Pool, Arrows) displays a red "TRAP TRIGGERED!" title.
   * Spawning mob hordes displays a red "UNDEAD HORDE!" title.
   * Spawning the Wither Boss ambush displays a red "WITHER CURSE!" title.
+  * Spawning the Angry Puppers ambush displays a bold red "ANGRY PUPPERS!" title.
 1. **Valuable Items:** Drops 1-3 valuable items tiered by Fate (Low: Iron/Pearls | Mid: Gold/Diamond/Emeralds | High: Netherite/Totems/Enchanted Apples).
 2. **Weapons:** Drops a random weapon tiered by Fate (Low: Iron/Bow | Mid: Diamond/Gold/Crossbow | High: Netherite/Trident).
 3. **Armor Sets:** Drops an entire, full set of armor at once tiered by Fate!
@@ -65,8 +67,15 @@ If your luck runs out, an ominous sound plays, a red chat message appears, and o
 
 ## 🛠️ Installation
 1. Install **NeoForge 26.2**.
-2. Drop the `mysteriumfateboxes-1.0.7-release.jar` into your `.minecraft/mods` folder.
+2. Drop the `mysteriumfateboxes-1.0.8-release.jar` into your `.minecraft/mods` folder.
 3. Load up your world and test your fate!
+
+---
+
+## ⚙️ Configuration
+
+Mysterium Fateboxes includes a comprehensive configuration file that allows server owners and players to tailor the experience:
+* **Disable Destructive Events:** You can easily disable Explosions, Lava Pools, and Wither Boss spawns via the config file. If one of these events is rolled while disabled, the mod gracefully falls back to an appropriate Mob Horde to ensure the punishment still happens without destroying your world!
 
 ---
 

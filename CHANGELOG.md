@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.8-release] - 2026-07-11
+
+### Added
+* **Configuration Options**: Added a new configuration file (`mysteriumfateboxes-server.toml` or via Mod Menu) powered by `FateBoxConfig`. Server owners and players can now toggle the spawning of Lava Pools, Explosions, and Wither Bosses. 
+  * If a disabled trap/event is rolled, the system will dynamically fall back to an appropriate Mob Horde spawn to ensure the player still receives a Bad Fate punishment.
+* **API Configuration Access**: The `FateBoxConfig` class has been exposed in the Developer API. Addons can now read from or extend this configuration class to manage their own settings alongside the main mod!
+* **Improved Lava Pool Trap**: The Lava Pool Trap (High Bad Fate) now generates a solid bowl (randomly choosing between Obsidian and Stone) underneath and around the lava pool, rather than just replacing the blocks on the current layer, preventing the lava from breaking map terrain in unexpected ways or leaking downward.
+
 ## [1.0.7-release] - 2026-07-11
 
 ### Added
