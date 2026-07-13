@@ -48,8 +48,8 @@ You can also manually add or verify dependencies through the Project Structure m
 4. Verify that the library now appears in your dependencies list under the **Compile** scope. You might see a warning about changes being lost after reimporting—this is normal and reminds you to also update `build.gradle`.
 
    ![Verify Library 1](images/Screenshot%202026-07-13%20173920.png)
-   ![Verify Library 2](images/Screenshot%202026-07-13%20173929.png)
    ![Verify Library 3](images/Screenshot%202026-07-13%20173949.png)
+   ![Verify Library 2](images/Screenshot%202026-07-13%20173929.png)
 
 5. Click **Apply** and **OK**.
 
